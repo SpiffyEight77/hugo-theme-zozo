@@ -1,10 +1,25 @@
 <footer class="footer">
     <div class="powered_by">
         <a href="https://varkai.com">Designed by VarKai,</a>
-        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+        <a href="https://www.gohugo.io/">Proudly published with Hugo</a>
     </div>
 
+    <div class="powered_by" style="padding-top:5px;">
+        <a>
+          <span id="busuanzi_container_site_pv">
+            Viewed by you guys for a total of
+            <span id="busuanzi_value_site_pv"></span> times ♥
+          </span>
+        </a>
+      </div>
+
+    <div class="powered_by" style="padding-top:5px;">
+        <a>©2016 - {{ now.Format "2006"}}</a>
+      </div>
+    </div>
+    
     <div class="footer_slogan">
         <span>{{ .Site.Params.footerSlogan }}</span>
     </div>
 </footer>
+
