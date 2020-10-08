@@ -2,9 +2,21 @@
 <link href="{{ "css/fancybox.min.css" | absURL }}" rel="stylesheet">
 <script src="{{ "js/fancybox.min.js" | absURL }}"></script>
 <script src="{{ "js/zozo.js" | absURL }}"></script>
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 {{ if .Site.Params.enableMathJax }}
 {{ partial "mathjax.html" . }}
 {{ end }}
 
 {{ template "_internal/google_analytics_async.html" . }}
+
+<meta name=”apple-mobile-web-app-capable” content=”yes”>
+<script>
+  // Check that service workers are registered
+  if ('serviceWorker' in navigator) {
+    // Use the window load event to keep the page load performant
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/service-worker.js');
+    });
+  }
+</script>
